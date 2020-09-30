@@ -87,20 +87,20 @@ The material in 3.1 was added to `src/ring_theory/discrete_valuation_ring.lean` 
 
 ## Listing of the Witt vector directory:
 
-basic.lean
-compare.lean
-frobenius.lean
-identities.lean
-init_tail.lean
-is_poly.lean
-mul_p.lean
-structure_polynomial.lean
-teichmuller.lean
-truncated.lean
-verschiebung.lean
-witt_polynomial.lean
-witt_sub.lean
-witt_vector_preps.lean
+* basic.lean
+* compare.lean
+* frobenius.lean
+* identities.lean
+* init_tail.lean
+* is_poly.lean
+* mul_p.lean
+* structure_polynomial.lean
+* teichmuller.lean
+* truncated.lean
+* verschiebung.lean
+* witt_polynomial.lean
+* witt_sub.lean
+* witt_vector_preps.lean
 
 ## Import hierarchy:
 
