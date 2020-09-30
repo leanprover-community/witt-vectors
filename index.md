@@ -17,7 +17,7 @@ Our project is designed to be incorporated into Lean's mathematical library
 [mathlib](https://github.com/leanprover-community/mathlib).
 At some point in the near future, what we describe in the paper
 will appear in the main branch of mathlib.
-We preserve a [branch of mathlib]()
+We preserve a [branch of mathlib](https://github.com/leanprover-community/mathlib/tree/witt-vectors-arxiv)
 frozen at the time of submission of this paper to arXiv.
 
 ## Installation instructions
@@ -25,7 +25,7 @@ frozen at the time of submission of this paper to arXiv.
 ### Installing Lean
 
 The code is written and tested with the community fork of Lean 3, version 3.20.0.
-To install it, please see: https://leanprover-community.github.io/get_started.html
+To install it, please see <https://leanprover-community.github.io/get_started.html>.
 
 We STRONGLY recommend following these directions, which will install elan,
 the Lean version manager, which will choose the correct version of Lean automatically.
@@ -34,7 +34,7 @@ If you install a fixed version, make sure it is 3.20.0.
 ### Running the code from the Witt vector project
 
 The code is available as a branch of mathlib on github.
-See https://github.com/leanprover-community/mathlib/tree/witt-vectors-arxiv
+See <https://github.com/leanprover-community/mathlib/tree/witt-vectors-arxiv>.
 By following the installation instructions above,
 a tool called `leanproject` should have been installed.
 By running `leanproject get mathlib:witt-vectors-arxiv` this branch will automatically be cloned
