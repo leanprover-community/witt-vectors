@@ -2,7 +2,7 @@
 
 This page contains supplementary material for the paper
 [Formalizing the Ring of Witt Vectors]()
-by [Johan Commelin]() and [Robert Y. Lewis]().
+by [Johan Commelin](https://math.commelin.net/) and [Robert Y. Lewis](https://robertylewis.com).
 
 The paper describes a formalization in the
 [Lean proof assistant](https://leanprover.github.io)
