@@ -53,8 +53,8 @@ and everything should work.
 
 Our main contributions can be found in:
 
-* `src/data/padics/ring_homs.lean`
-* the contents of `src/ring_theory/witt_vector/`
+* [`src/data/padics/ring_homs.lean`](https://github.com/leanprover-community/mathlib/blob/witt-vectors-arxiv/src/data/padics/ring_homs.lean)
+* the contents of [`src/ring_theory/witt_vector/`](https://github.com/leanprover-community/mathlib/tree/witt-vectors-arxiv/src/ring_theory/witt_vector)
 
 Many other small contributions have already found their way into the main library,
 and are harder to point at.
@@ -77,6 +77,9 @@ The material in 3.1 was added to `src/ring_theory/discrete_valuation_ring.lean` 
        `src/ring_theory/witt_vector/witt_polynomial.lean`
 * 4.3: `src/ring_theory/witt_vector/basic.lean` (the very top)
 * 4.4: `src/ring_theory/witt_vector/is_poly.lean`
+
+### Section 5 
+
 * 5.1: `src/ring_theory/witt_vector/basic.lean`
 * 5.2: These tactics appear throughout, including in `basic.lean`.
        The `witt_simp` tactic appears in `is_poly.lean`.
