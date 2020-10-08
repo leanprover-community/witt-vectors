@@ -1,7 +1,7 @@
 # Formalizing the Ring of Witt Vectors
 
 This page contains supplementary material for the paper
-[Formalizing the Ring of Witt Vectors]()
+[Formalizing the Ring of Witt Vectors](https://arxiv.org/abs/2010.02595)
 by [Johan Commelin](https://math.commelin.net/) and [Robert Y. Lewis](https://robertylewis.com).
 
 The paper describes a formalization in the
