@@ -1,35 +1,36 @@
 # Formalizing the Ring of Witt Vectors
 
 This page contains supplementary material for the paper
-[Formalizing the Ring of Witt Vectors](https://arxiv.org/abs/2010.02595)
-by [Johan Commelin](https://math.commelin.net/) and [Robert Y. Lewis](https://robertylewis.com).
+[Formalizing the Ring of Witt Vectors](witt-vectors.pdf)
+by [Johan Commelin](https://math.commelin.net/) and [Robert Y. Lewis](https://robertylewis.com),
+published in the proceedings of [CPP '21](https://popl21.sigplan.org/home/CPP-2021).
 
 The paper describes a formalization in the
 [Lean proof assistant](https://leanprover.github.io)
-in which we construct the ring of Witt vectors over a base ring R
+in which we construct the ring of Witt vectors over a base ring `R`
 along with some of its important operations,
-and show that the ring of Witt vectors over the integers modulo p
-is isomorphic to the ring of p-adic integers.
+and show that the ring of Witt vectors over the integers modulo `p`
+is isomorphic to the ring of `p`-adic integers.
 
 ## Source code
 
-Our project is designed to be incorporated into Lean's mathematical library
-[mathlib](https://github.com/leanprover-community/mathlib).
-At some point in the near future, what we describe in the paper
-will appear in the main branch of mathlib.
-We preserve a [branch of mathlib](https://github.com/leanprover-community/mathlib/tree/witt-vectors-arxiv)
-frozen at the time of submission of this paper to arXiv.
+Our project is incorporated into Lean's mathematical library
+[mathlib](https://github.com/leanprover-community/mathlib) in the
+[src/ring_theory/witt_vector](https://github.com/leanprover-community/mathlib/tree/master/src/ring_theory/witt_vector) directory.
+The mathlib project is constantly changing, and the files may have been updated since this paper was written.
+We preserve a [branch of mathlib](https://github.com/leanprover-community/mathlib/tree/witt-vectors-arxiv/src/ring_theory/witt_vector)
+frozen on December 23, 2020, 
+around the time that the corresponding paper was finalized and submitted to arXiv.
 
 ## Installation instructions
 
 ### Installing Lean
 
-The code is written and tested with the community fork of Lean 3, version 3.20.0.
+The code is written and tested with the community fork of Lean 3.
 To install it, please see <https://leanprover-community.github.io/get_started.html>.
 
 We STRONGLY recommend following these directions, which will install elan,
 the Lean version manager, which will choose the correct version of Lean automatically.
-If you install a fixed version, make sure it is 3.20.0.
 
 ### Running the code from the Witt vector project
 
@@ -37,8 +38,10 @@ The code is available as a branch of mathlib on github.
 See <https://github.com/leanprover-community/mathlib/tree/witt-vectors-arxiv>.
 By following the installation instructions above,
 a tool called `leanproject` should have been installed.
-By running `leanproject get mathlib:witt-vectors-arxiv` this branch will automatically be cloned
+By running `leanproject get mathlib` this branch will automatically be cloned
 and precompiled binary artifacts will be downloaded from the cloud.
+If you prefer to download the branch frozen at submission time,
+run `leanproject get mathlib:witt-vectors-arxiv`.
 
 If you inspect the files in VSCode, you must use VSCode's `Open Folder` option
 to open the project root directory.
@@ -56,13 +59,9 @@ Our main contributions can be found in:
 * [`src/data/padics/ring_homs.lean`](https://github.com/leanprover-community/mathlib/blob/witt-vectors-arxiv/src/data/padics/ring_homs.lean)
 * the contents of [`src/ring_theory/witt_vector/`](https://github.com/leanprover-community/mathlib/tree/witt-vectors-arxiv/src/ring_theory/witt_vector)
 
-Many other small contributions have already found their way into the main library,
-and are harder to point at.
+Other small contributions are scattered throughout the library, and are harder to point at.
 
-The file `witt_vector_preps.lean` inside `src/ring_theory/witt_vector/`
-contains many preliminary results that should be distributed into other files in the library.
-
-We will now explain how the other files correspond to the different subsections of the paper.
+We will now explain how these files correspond to the different subsections of the paper.
 
 ### Section 3
 
@@ -75,7 +74,7 @@ The material in 3.1 was added to `src/ring_theory/discrete_valuation_ring.lean` 
 * 4.1: `src/data/mv_polynomial/monad.lean`
 * 4.2: `src/ring_theory/witt_vector/structure_polynomial.lean`,
        `src/ring_theory/witt_vector/witt_polynomial.lean`
-* 4.3: `src/ring_theory/witt_vector/basic.lean` (the very top)
+* 4.3: `src/ring_theory/witt_vector/defs.lean`
 * 4.4: `src/ring_theory/witt_vector/is_poly.lean`
 
 ### Section 5 
@@ -92,6 +91,7 @@ The material in 3.1 was added to `src/ring_theory/discrete_valuation_ring.lean` 
 
 * basic.lean
 * compare.lean
+* defs.lean
 * frobenius.lean
 * identities.lean
 * init_tail.lean
@@ -102,8 +102,6 @@ The material in 3.1 was added to `src/ring_theory/discrete_valuation_ring.lean` 
 * truncated.lean
 * verschiebung.lean
 * witt_polynomial.lean
-* witt_sub.lean
-* witt_vector_preps.lean
 
 ## Import hierarchy:
 
@@ -113,11 +111,13 @@ witt_polynomial
 |
 structure_polynomial
 |
+defs
+|
 basic
 |
 is_poly
-|----------|-------------|------|----------|------------|
-frobenius  verschiebung  mul_p  init_tail  teichmuller  witt_sub
+|----------|-------------|------|----------|
+frobenius  verschiebung  mul_p  init_tail  teichmuller 
 |----------|-------------|      |
            identities           truncated
            |--------------------|
