@@ -2,6 +2,7 @@
 
 This page contains supplementary material for the paper
 [Formalizing the Ring of Witt Vectors](witt-vectors.pdf)
+[(arXiv)](https://arxiv.org/abs/2010.02595)
 by [Johan Commelin](https://math.commelin.net/) and [Robert Y. Lewis](https://robertylewis.com),
 published in the proceedings of [CPP '21](https://popl21.sigplan.org/home/CPP-2021).
 
